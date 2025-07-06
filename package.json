@@ -1,0 +1,81 @@
+{
+  "name": "VSC-GF74",
+  "displayName": "INI intellisense",
+  "description": "",
+  "version": "0.0.1",
+  "icon": "assets/icon.png",
+  "author": {
+    "name": "Ly",
+    "email": "azbitomsg@proton.me",
+    "url": "https://github.com/azbito"
+  },
+  "publisher": "azbito",
+  "galleryBanner": {
+    "color": "#fc037b",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.100.2"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:gf-74.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "textDocumentSync": {
+    "openClose": true,
+    "change": 2,
+    "willSave": false,
+    "willSaveWaitUntil": false,
+    "save": true
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "ini",
+        "aliases": [
+          "INI",
+          "ini"
+        ],
+        "extensions": [
+          ".ini"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "start": "node ./out/server.js",
+    "debug": "node --inspect-brk ./out/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azbito/gf-ini-intellisense"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.100.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "vscode-jsonrpc": "^8.2.1",
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12",
+    "vscode-uri": "^3.1.0"
+  }
+}
