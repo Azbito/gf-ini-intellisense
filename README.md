@@ -33,4 +33,4 @@ This extension provides enhanced editing features for custom `.ini` configuratio
 
 ## 📦 Installation
 
-You can install this extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+You can install this extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=azbito.VSC-GF74).
